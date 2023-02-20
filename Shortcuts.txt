@@ -1,0 +1,7 @@
+Ctrl + G : goto line
+Ctrl + Arrow keys : Move Word by word (up/down)
+Ctrl+D : highlight word
+Ctrl + Shift + K : del line
+Ctrl + L : select lines
+Alt + Shift + Arrow keys : paste line (up/down)
+Arrow Keys (up/down) : to cycle through cmd inputs
