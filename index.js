@@ -1,7 +1,13 @@
-let firstName = "Shrikant";
-let age = 23;
-let isApproved = true;
-let lastName;
-let selectedColor = null;
+let person = {
+  name: "Shrikant",
+  age: 23,
+};
 
-console.log(firstName, age, isApproved, lastName, selectedColor);
+//Dot Notation
+person.name = "Mosh";
+
+console.log(person.name);
+
+// Bracket Notation
+let selection = "name";
+person[selection] = "Dad";
