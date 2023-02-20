@@ -1,11 +1,7 @@
-let firstName = "shri";
-console.log(firstName);
+let firstName = "Shrikant";
+let age = 23;
+let isApproved = true;
+let lastName;
+let selectedColor = null;
 
-//cant be a reserved keyword
-//should be meaningful
-//cant start with a no (1name)
-//cant contain a space or hyphen (-)
-//Case-sensitive
-//use camelCase
-
-let lastName = "Kalar";
+console.log(firstName, age, isApproved, lastName, selectedColor);
