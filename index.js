@@ -1,7 +1,6 @@
-// Strict Equality (Type + Value)
-console.log(1 === 1);
-console.log("1" === 1);
+// If a customer has more than 100 points -> Gold else Silver
 
-// Loose Equality (Convert & checks the value)
-console.log(1 == 1);
-console.log(1 == "1");
+let points = 90;
+let type = points > 100 ? "gold" : "silver";
+
+console.log(type);
