@@ -1,14 +1,16 @@
-// performing a task
-function greet(name, lastName) {
-  console.log("Hello " + name + " " + lastName);
-}
+let x = 10;
+let y = 3;
 
-// Calculating a value
-function square(number) {
-  return number * number;
-}
+// console.log(x + y);
+// console.log(x - y);
+// console.log(x * y);
+// console.log(x / y);
+// console.log(x % y);
+// console.log(x ** y);
 
-console.log(2 + 2);
+//Increment (++)
+console.log(x++);
+console.log(x);
 
-// argument is value supplied.
-//parameter is var in fn declration
+//Decrement (--)
+console.log(--x);
