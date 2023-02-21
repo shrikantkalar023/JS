@@ -1,5 +1,8 @@
-let selectedColors = ["red", "blue"];
-selectedColors[2] = "1";
-console.log(selectedColors.length);
+function greet(name, lastName) {
+  console.log("Hello " + name + " " + lastName);
+}
 
-//array is an object
+greet("John", "Doe");
+
+// argument is value supplied.
+//parameter is var in fn declration
