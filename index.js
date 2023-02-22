@@ -1,6 +1,10 @@
-// If a customer has more than 100 points -> Gold else Silver
+// Logical AND (&&)
+// Logical OR (||)
+// NOT (!)
+let highIncome = false;
+let goodCreditScore = false;
+let eligibleForLoan = highIncome || goodCreditScore;
 
-let points = 90;
-let type = points > 100 ? "gold" : "silver";
-
-console.log(type);
+console.log("Eligible", eligibleForLoan);
+let applicationRefused = !eligibleForLoan;
+console.log("Application Refused", applicationRefused);
