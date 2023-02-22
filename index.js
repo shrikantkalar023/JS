@@ -1,18 +1,19 @@
-// Falsy (false)
-// undefined;
-// null;
-// 0;
-// false;
-// ("");
-// NaN;
+// 1=00000001 1 byte ig
+// 2=00000010
+// 3=00000011
 
-// Anything that is not Falsy -> Truthy
+console.log(1 | 2); // Bitwise OR
+console.log(1 & 2); // Bitwise AND
 
-// Short-circuiting
-console.log(false || 1 || 2);
+// Read, Write, Execute
+// 00000100
+// 00000010
+// 00000001
 
-let userColor = undefined;
-let defaultColor = "blue";
-let currentColor = userColor || defaultColor;
+const readPermission = 4;
+const writePermission = 2;
+const executePermission = 1;
 
-console.log(currentColor);
+let myPermission = 0;
+myPermission = myPermission | readPermission | writePermission;
+console.log(myPermission & writePermission ? "YES" : "NO");
