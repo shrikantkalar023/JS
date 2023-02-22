@@ -1,10 +1,18 @@
-// Logical AND (&&)
-// Logical OR (||)
-// NOT (!)
-let highIncome = false;
-let goodCreditScore = false;
-let eligibleForLoan = highIncome || goodCreditScore;
+// Falsy (false)
+// undefined;
+// null;
+// 0;
+// false;
+// ("");
+// NaN;
 
-console.log("Eligible", eligibleForLoan);
-let applicationRefused = !eligibleForLoan;
-console.log("Application Refused", applicationRefused);
+// Anything that is not Falsy -> Truthy
+
+// Short-circuiting
+console.log(false || 1 || 2);
+
+let userColor = undefined;
+let defaultColor = "blue";
+let currentColor = userColor || defaultColor;
+
+console.log(currentColor);
