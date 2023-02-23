@@ -1,14 +1,17 @@
-// // Hour
-// If betn 6am & 12pm : Gm
-// If betn 12pm & 5pm: Ga
-// else: GE
+// With switch case , we can compare value of a var
+// against a bunch of other values
 
-let hour = 10;
+let role = "moderator";
 
-if (hour >= 6 && hour < 12) {
-  console.log("Good morning!");
-} else if (hour > 12 && hour < 18) {
-  console.log("Good afternoon!");
-} else {
-  console.log("Good evening!");
+switch (role) {
+  case "guest":
+    console.log("Guest User");
+    break;
+
+  case "moderator":
+    console.log("Moderator User");
+    break;
+
+  default:
+    console.log("Unknown User");
 }
