@@ -1,17 +1,36 @@
-// With switch case , we can compare value of a var
-// against a bunch of other values
+// For loop
 
-let role = "moderator";
+for (let i = 5; i >= 1; i--) {
+  if (i % 2 !== 0) console.log(i);
+}
 
-switch (role) {
-  case "guest":
-    console.log("Guest User");
-    break;
+// While Loop
+let i = 0;
+while (i <= 5) {
+  if (i % 2 !== 0) console.log(i);
+  i++;
+}
 
-  case "moderator":
-    console.log("Moderator User");
-    break;
+// Do while...condition is evaluated later
+let j = 9;
+do {
+  if (j % 2 !== 0) console.log(j);
+  j++;
+} while (j <= 5);
 
-  default:
-    console.log("Unknown User");
+// for-in loop
+const person = {
+  name: "mosh",
+  age: 30,
+};
+
+for (const key in person) {
+  console.log(key, ":", person[key]);
+}
+
+// for-of loop
+const colors = ["red", "green", "blue"];
+
+for (const color of colors) {
+  console.log(color);
 }
