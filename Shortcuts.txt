@@ -5,3 +5,5 @@ Ctrl + Shift + K : del line
 Ctrl + L : select lines
 Alt + Shift + Arrow keys : paste line (up/down)
 Arrow Keys (up/down) : to cycle through cmd inputs
+
+conditional/terenary statements (condition) ? true block : false block
