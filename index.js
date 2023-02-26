@@ -1,13 +1,16 @@
-function fizzBuzz(input) {
-  if (typeof input !== "number") return NaN;
-  if (input % 3 === 0 && input % 5 === 0) return "FizzBuzz";
-  if (input % 3 === 0) return "Fizz";
-  if (input % 5 === 0) return "Buzz";
-  return input;
+function checkSpeed(speed) {
+  const speedLimit = 70;
+  const kmPerPoint = 5;
+  if (speed < speedLimit + kmPerPoint) return "Ok";
+  const points = Math.floor((speed - 70) / kmPerPoint);
+  if (speed > speedLimit) return points < 12 ? points : "License Suspended";
 }
 
-console.log(fizzBuzz(3));
-console.log(fizzBuzz(5));
-console.log(fizzBuzz(15));
-console.log(fizzBuzz(7));
-console.log(fizzBuzz(false));
+console.log(checkSpeed(69));
+console.log(checkSpeed(70));
+console.log(checkSpeed(71));
+console.log(checkSpeed(75));
+console.log(checkSpeed(77));
+console.log(checkSpeed(83));
+console.log(checkSpeed(90));
+console.log(checkSpeed(130));
