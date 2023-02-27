@@ -1,16 +1,21 @@
-const movie = {
-  title: "a",
-  releaseYear: 2018,
-  rating: 4.5,
-  director: "b",
-};
+const marks = [80, 80, 50];
 
-function showProperties(object) {
-  for (const key in object)
-    if (Object.hasOwnProperty.call(object, key)) {
-      if (typeof object[key] === "string") console.log(key, object[key]);
-      else continue;
-    }
+function calculateGrade(marks) {
+  const avg = calculateAverage(marks);
+  console.log(avg);
+  if (avg <= 59) return "F";
+  if (avg <= 69) return "D";
+  if (avg <= 79) return "C";
+  if (avg <= 89) return "B";
+  return "A";
 }
 
-showProperties(movie);
+function calculateAverage(array) {
+  let sum = 0;
+  for (let value of array) {
+    sum += value;
+  }
+  return sum / array.length;
+}
+
+console.log(calculateGrade(marks));
