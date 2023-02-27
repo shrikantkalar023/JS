@@ -1,0 +1,3 @@
+Use let when need variable var & const when need constant var.
+
+to iterate in object use forin loop.
