@@ -1,21 +1,11 @@
-const marks = [80, 80, 50];
+showStarts(3);
 
-function calculateGrade(marks) {
-  const avg = calculateAverage(marks);
-  console.log(avg);
-  if (avg <= 59) return "F";
-  if (avg <= 69) return "D";
-  if (avg <= 79) return "C";
-  if (avg <= 89) return "B";
-  return "A";
-}
-
-function calculateAverage(array) {
-  let sum = 0;
-  for (let value of array) {
-    sum += value;
+function showStarts(rows) {
+  for (let row = 0; row < rows; row++) {
+    let pattern = "";
+    for (let i = 0; i < row + 1; i++) {
+      pattern += "*";
+    }
+    console.log(pattern);
   }
-  return sum / array.length;
 }
-
-console.log(calculateGrade(marks));
