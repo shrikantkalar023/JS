@@ -1,15 +1,15 @@
-// Object-oriented Programming (OOP)
+// Factory Fn to make Objects
 
-const circle = {
-  radius: 1, //can be any type of value in (key:value pair)
-  location: {
-    x: 1,
-    y: 1,
-  },
-  isVisible: true,
-  draw: function () {
-    console.log("draw");
-  },
-};
+function createCricle(radius) {
+  return {
+    radius,
+    draw() {
+      console.log("draws");
+    },
+  };
+}
 
-circle.draw(); // Method
+c1 = createCricle(1);
+c2 = createCricle(2);
+console.log(c1);
+console.log(c2);
