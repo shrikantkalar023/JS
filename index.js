@@ -1,11 +1,9 @@
-const circle = {
-  radius: 1,
-};
+let x = {};
+// let x = new Object();
 
-circle.color = "red";
-circle.draw = function () {};
+new String(); // '',"",``
+new Boolean(); // true false
+new Number(); // 1,2,3..
 
-delete circle.color;
-delete circle.draw;
-
-console.log(circle);
+// Every Obj has a Constructor property
+// which references the fn used to create that obj

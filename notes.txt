@@ -8,3 +8,6 @@ Single Responsibility Principle: Each fn doing its own one thing.
 
 camel Case -> oneTwoThree
 Pascal Case -> OneTwoThree
+
+// Every Obj has a Constructor property
+// which references the fn used to create that obj
