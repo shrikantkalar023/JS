@@ -5,3 +5,6 @@ to iterate in object use forin loop.
 Single Responsibility Principle: Each fn doing its own one thing.
 
 'radius: radius' is equivalent to 'radius' (inside a fn)
+
+camel Case -> oneTwoThree
+Pascal Case -> OneTwoThree
