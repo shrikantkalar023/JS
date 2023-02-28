@@ -1,11 +1,13 @@
-showStarts(3);
+showPrimes(20);
 
-function showStarts(rows) {
-  for (let row = 0; row < rows; row++) {
-    let pattern = "";
-    for (let i = 0; i < row + 1; i++) {
-      pattern += "*";
-    }
-    console.log(pattern);
+function showPrimes(limit) {
+  for (let num = 2; num <= limit; num++) {
+    if (isPrime(num)) console.log(num);
   }
+}
+
+function isPrime(num) {
+  for (let factor = 2; factor <= num / 2; factor++)
+    if (num % factor === 0) return false;
+  return true;
 }
