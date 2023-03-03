@@ -1,15 +1,14 @@
-let x = { value: 10 };
-let y = x;
+const circle = {
+  radius: 1,
+  draw() {
+    console.log("draw");
+  },
+};
 
-x.value = 20;
+for (let key in circle) console.log(key, circle[key]);
 
-// Primitives are copied by their value
-// Objects are copied by their reference (address)
+for (let key of Object.keys(circle)) console.log(key);
 
-function increase(noobj) {
-  noobj.value++;
-}
+for (let key of Object.entries(circle)) console.log(key);
 
-let no = { value: 10 };
-increase(no);
-console.log(no);
+if ("color" in circle) console.log("yes");
