@@ -1,21 +1,23 @@
-const circle = {
-  radius: 1,
-  draw() {
-    console.log("draw");
-  },
-};
+const msg = "This is my\n" + "'first' message.";
 
-// const another = {};
-// for (let key in circle) another[key] = circle[key];
+// literals
+// Object {}
+// Boolean true, false
+// Str '', ""
+// Template ``
 
-const another = Object.assign({}, { color: "yello" }, circle);
+const another = `This is my
+'first' msg`;
 
-const circle1 = {
-  color: "yello",
-};
+const name = "John";
 
-// spread operator
-const another1 = { ...circle, ...circle1 };
+const another1 = `Hi ${name}
 
+Thank u for joining.
+
+Regards
+Shrikant`;
+
+console.log(msg);
 console.log(another);
 console.log(another1);

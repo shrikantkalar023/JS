@@ -15,3 +15,5 @@ which references the fn used to create that obj
 for-of loop works with iterables only.Objs r not iterable, but
 we can use Objects.keys(Obj_name) or Object.entries(obj_name)
 to get array of keys & key,value pair respectively.
+
+We have math & str obj just like in py.
