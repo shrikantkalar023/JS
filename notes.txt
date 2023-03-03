@@ -9,5 +9,9 @@ Single Responsibility Principle: Each fn doing its own one thing.
 camel Case -> oneTwoThree
 Pascal Case -> OneTwoThree
 
-// Every Obj has a Constructor property
-// which references the fn used to create that obj
+Every Obj has a Constructor property
+which references the fn used to create that obj
+
+for-of loop works with iterables only.Objs r not iterable, but
+we can use Objects.keys(Obj_name) or Object.entries(obj_name)
+to get array of keys & key,value pair respectively.
