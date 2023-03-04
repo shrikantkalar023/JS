@@ -1,23 +1,6 @@
-const msg = "This is my\n" + "'first' message.";
+const now = new Date();
+const date1 = new Date("March 3 2022 09:00");
+const date2 = new Date(2022, 2, 2, 9);
 
-// literals
-// Object {}
-// Boolean true, false
-// Str '', ""
-// Template ``
-
-const another = `This is my
-'first' msg`;
-
-const name = "John";
-
-const another1 = `Hi ${name}
-
-Thank u for joining.
-
-Regards
-Shrikant`;
-
-console.log(msg);
-console.log(another);
-console.log(another1);
+now.getDate();
+date1.setFullYear(2021);
