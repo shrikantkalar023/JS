@@ -4,31 +4,24 @@ function AddressC(street, city, zipCode) {
   this.city = city;
   this.zipCode = zipCode;
 }
-const Address1 = new AddressC(2, "Nagpur", 440038);
-const Address2 = {
-  street: 1,
-  city: "Los Angeles",
-  zipCode: 440028,
-};
+const address1 = new AddressC(2, "Nagpur", 440038);
+const address2 = new AddressC(2, "Nagpur", 440038);
+let address3 = address2;
 
-// Factory Function
-function addressF(street, city, zipCode) {
-  return {
-    street,
-    city,
-    zipCode,
-  };
+// address2.district = "nagpur";
+
+function areSame(obj1, obj2) {
+  return obj1 === obj2;
 }
 
-const Address3 = addressF(3, "New York", 239818);
-
-function Showaddress(obj) {
-  for (const key in obj) {
-    if (Object.hasOwnProperty.call(obj, key)) {
-      console.log(key, obj[key]);
-    }
+function areEqual(obj1, obj2) {
+  let l1 = Object.keys(obj1);
+  let l2 = Object.keys(obj2);
+  for (let i = 0; i < Math.max(l1.length, l2.length); i++) {
+    if (obj1[l1[i]] !== obj2[l2[i]]) return false;
   }
+  return true;
 }
-Showaddress(Address1);
-Showaddress(Address2);
-Showaddress(Address3);
+console.log(areEqual(address1, address2));
+console.log(areSame(address1, address2));
+console.log(areSame(address3, address2));
