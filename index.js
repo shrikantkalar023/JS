@@ -1,15 +1,13 @@
-const courses = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-];
+const num = [1, 2, 3, 4];
 
-//  arrow fn (new-ES6)
-const course = courses.find((course) => course.name === "a");
+// End
+console.log(num.pop());
+console.log(num);
 
-// predicate fn (old)
-const courseIndex = courses.findIndex(function (course) {
-  return course.name === "a";
-});
+// Beginning
+console.log(num.shift());
+console.log(num);
 
-console.log(course);
-console.log(courseIndex);
+// Middle
+console.log(num.splice(0, 1));
+console.log(num);
