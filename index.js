@@ -1,25 +1,7 @@
-blogPost1 = {
-  title: "How to xyz",
-  body: "smthing",
-  author: "rahul",
-  views: 1234321,
-  comments: [
-    { author: "name1", body: "sm text" },
-    { author: "name2", body: "sm text 2" },
-  ],
-  isLive: true,
-};
+let priceRanges = [
+  { label: "$", toolTip: "Inexpensive", minPerPerson: 0, maxPerPerson: 10 },
+  { label: "$$", toolTip: "Moderate", minPerPerson: 11, maxPerPerson: 20 },
+  { label: "$$$", toolTip: "Expensive", minPerPerson: 21, maxPerPerson: 30 },
+];
 
-function BlogPost(title, body, author) {
-  this.title = title;
-  this.body = body;
-  this.author = author;
-  this.views = 0;
-  this.comments = [];
-  this.isLive = false;
-}
-
-const blogPost2 = new BlogPost("sm title", "sm text", "name1");
-
-console.log(blogPost1);
-console.log(blogPost2);
+let resturant = [{ avgPerPerson: 5 }];
