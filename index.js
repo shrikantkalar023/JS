@@ -1,16 +1,6 @@
-const courses = [
-  { id: 1, name: "a" },
-  { id: 2, name: "b" },
-];
+const num = [1, 2, 3, 1, 4];
 
-//  predicate or callback fn
-const course = courses.find(function (course) {
-  return course.name === "a";
-});
-
-const courseIndex = courses.findIndex(function (course) {
-  return course.name === "a";
-});
-
-console.log(course);
-console.log(courseIndex);
+console.log(num.indexOf(1, 1));
+console.log(num.lastIndexOf(1));
+console.log(num.indexOf(1) !== -1);
+console.log(num.includes(1));
