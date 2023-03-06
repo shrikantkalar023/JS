@@ -1,15 +1,16 @@
-// Adding elements to array
-const num = [3, 4];
-console.log(num);
+const courses = [
+  { id: 1, name: "a" },
+  { id: 2, name: "b" },
+];
 
-// End
-num.push(5, 6);
-console.log(num);
+//  predicate or callback fn
+const course = courses.find(function (course) {
+  return course.name === "a";
+});
 
-// Beginning
-num.unshift(1, 2);
-console.log(num);
+const courseIndex = courses.findIndex(function (course) {
+  return course.name === "a";
+});
 
-// Middle
-num.splice(2, 0, "a", "b", "c");
-console.log(num);
+console.log(course);
+console.log(courseIndex);
