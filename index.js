@@ -1,13 +1,19 @@
-const num = [1, 2, 3, 4];
+let num = [1, 2, 3, 4];
+let another = num;
 
-// End
-console.log(num.pop());
-console.log(num);
+// sol 1
+// num = [];
 
-// Beginning
-console.log(num.shift());
-console.log(num);
+// sol 2
+// num.length = 0;
 
-// Middle
-console.log(num.splice(0, 1));
+// sol 3
+// num.splice(0, num.length);
+
+// sol 4
+while (num.length > 0) {
+  num.pop();
+}
+
 console.log(num);
+console.log(another);
