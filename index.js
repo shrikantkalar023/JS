@@ -1,11 +1,7 @@
-let first = [1, 2, 3];
-let second = [4, 5, 6];
+let numbers = [1, 2, 3];
 
-// combiend = first.concat(second);
-const combiend = [...first, "a", ...second, "b"];
-console.log(combiend);
+for (const num of numbers) {
+  console.log(num);
+}
 
-// const copy = combiend.slice();
-const copy = [...combiend];
-
-console.log(copy);
+numbers.forEach((num, index) => console.log(index, num));
