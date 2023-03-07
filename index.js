@@ -1,5 +1,7 @@
-let first = [1, 2, 3];
+let first = [{ id: 1 }];
 let second = [4, 5, 6];
+
+first[0].id = 10;
 
 combiend = first.concat(second);
 console.log(combiend);
