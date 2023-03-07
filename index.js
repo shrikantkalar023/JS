@@ -1,19 +1,9 @@
-let num = [1, 2, 3, 4];
-let another = num;
+let first = [1, 2, 3];
+let second = [4, 5, 6];
 
-// sol 1
-// num = [];
+combiend = first.concat(second);
+console.log(combiend);
 
-// sol 2
-// num.length = 0;
-
-// sol 3
-// num.splice(0, num.length);
-
-// sol 4
-while (num.length > 0) {
-  num.pop();
-}
-
-console.log(num);
-console.log(another);
+// const slice = combiend.slice(2, 4);
+const slice = combiend.slice(2);
+console.log(slice);
