@@ -1,15 +1,14 @@
 const num = [1, 2, -1, 3];
 
-// const filtered = num.filter((val) => val >= 0);
-// const items = filtered.map((val) => ({ value: val }));
+// let sum = 0;
+// for (const n of num) {
+//   sum += n;
+// }
 
-const items = num
-  .filter((val) => val >= 0)
-  .map((val) => ({ value: val }))
-  .filter((obj) => obj.value > 1)
-  .map((obj) => obj.value);
+const sum = num.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+);
 
-console.log(items);
+console.log(sum);
 
-// if returning just 1 obj use ({}) inside arrow fn
-// chaining methods = map().filer() calling method on another method
+// if accumulator not provided it is 1st ele of array
