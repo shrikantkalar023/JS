@@ -17,3 +17,5 @@ we can use Objects.keys(Obj_name) or Object.entries(obj_name)
 to get array of keys & key,value pair respectively.
 
 We have math & str obj just like in py.
+
+chaining methods = map().filer() calling method on another method
