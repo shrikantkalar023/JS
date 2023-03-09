@@ -1,21 +1,21 @@
-Use let when need variable var & const when need constant var.
+1.Use 'let' when need variable 'var' & 'const' when need constant var.
 
-to iterate in object use forin loop.
+2.FORIN LOOP:- to 'iterate' in object.
 
-Single Responsibility Principle: Each fn doing its own one thing.
+3.Single Responsibility Principle: Each fn doing its own one thing.
 
-'radius: radius' is equivalent to 'radius' (inside a fn)
+4.'radius: radius' is equivalent to 'radius' (inside a fn)
 
-camel Case -> oneTwoThree
-Pascal Case -> OneTwoThree
+5.camel Case -> oneTwoThree
+  Pascal Case -> OneTwoThree
 
-Every Obj has a Constructor property
-which references the fn used to create that obj
+6.Every Obj has a Constructor property which 
+references the fn used to create that obj
 
-for-of loop works with iterables only.Objs r not iterable, but
-we can use Objects.keys(Obj_name) or Object.entries(obj_name)
+7.FOROF LOOP:- works with iterables only. Objs r not iterable, but
+we can use 'Objects.keys(Obj_name)' or 'Object.entries(obj_name)'
 to get array of keys & key,value pair respectively.
 
-We have math & str obj just like in py.
+8.We have 'math' & 'str' obj just like in py.
 
-chaining methods = map().filer() calling method on another method
+9.chaining methods = map().filer() calling method on another method
