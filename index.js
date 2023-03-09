@@ -1,10 +1,11 @@
-const nums = [1, 2, 3, 4, 5];
+const nums = [0, 1, 2, 3, 4, 5, 1, 1, 2, 2, 9];
 
-function includes(array, searchEle) {
+function except(array, excluded) {
+  let output = [];
   for (const ele of array) {
-    if (ele === searchEle) return true;
+    if (!excluded.includes(ele)) output.push(ele);
   }
-  return false;
+  return output;
 }
 
-console.log(includes(nums, 123));
+console.log(except(nums, [1, 2]));

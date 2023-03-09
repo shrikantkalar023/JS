@@ -19,3 +19,5 @@ to get array of keys & key,value pair respectively.
 8.We have 'math' & 'str' obj just like in py.
 
 9.chaining methods = map().filer() calling method on another method
+
+10.if '(!excluded.includes(ele))' for targeting 'false' condition.
