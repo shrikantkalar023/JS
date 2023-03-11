@@ -1,21 +1,24 @@
-const nums = [1, 2, 7, 3, 5, 4];
+const movies = [
+  { title: "a", year: 2018, rating: 4.5 },
+  { title: "b", year: 2018, rating: 4.7 },
+  { title: "c", year: 2018, rating: 3 },
+  { title: "d", year: 2017, rating: 4.5 },
+];
 
-const max = getMax(nums);
+let result = movies
+  .filter((value) => value.year === 2018 && value.rating > 4)
+  .sort((a, b) => a.rating - b.rating)
+  .reverse()
+  .map((m) => m.title);
 
-console.log(max);
+// result.sort(function (a, b) {
+//   if (a.rating > b.rating) return 1;
+//   if (a.rating < b.rating) return -1;
+//   return 0;
+// });
 
-function getMax(array) {
-  if (array.length === 0) return undefined;
+// result.reverse();
 
-  // let maxEle = array[0];
-  // for (let ele = 1; ele < array.length; ele++) {
-  //   if (maxEle < array[ele]) maxEle = array[ele];
-  // }
-  // return maxEle;
+// result = result.map((value) => value.title);
 
-  return array.reduce((accumulator, current) => {
-    // if (accumulator < current) accumulator = current;
-    // return accumulator;
-    return accumulator < current ? current : accumulator;
-  });
-}
+console.log(result);
