@@ -21,3 +21,6 @@ to get array of keys & key,value pair respectively.
 9.chaining methods = map().filer() calling method on another method
 
 10.if '(!excluded.includes(ele))' for targeting 'false' condition.
+
+11.'Hoisting' in JS is moving up all the fn declarations to the top of the file.
+it is done by automaticallly JS engine executing the code.
