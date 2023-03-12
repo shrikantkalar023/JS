@@ -1,13 +1,9 @@
-// rest operator ...args. Rest argument comes last in fn declaration.
-`function sum(...args) {
-  return args.reduce((a, b) => a + b);
+function interest(principal, rate = 3.5, years = 5) {
+  // rate = rate || 3.5;
+  // years = years || 5;
+  return (principal * rate * years) / 100;
 }
 
-console.log(sum(20, 4, 8));`;
+console.log(interest(1000));
 
-function sum(discount, ...prices) {
-  const total = prices.reduce((a, b) => a + b);
-  return total * (1 - discount);
-}
-
-console.log(sum(0.1, 20, 30));
+// all default values at end of fn declration.
