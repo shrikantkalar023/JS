@@ -1,9 +1,18 @@
-function interest(principal, rate = 3.5, years = 5) {
-  // rate = rate || 3.5;
-  // years = years || 5;
-  return (principal * rate * years) / 100;
-}
+const person = {
+  firstName: "Shrikant",
+  lastName: "Kalar",
+  get fullname() {
+    return `${person.firstName} ${person.lastName}`;
+  },
+  set fullname(value) {
+    const parts = value.split(" ");
+    this.firstName = parts[0];
+    this.lastName = parts[1];
+  },
+};
 
-console.log(interest(1000));
+person.fullname = "Ashwini Kalar";
+console.log(person);
 
-// all default values at end of fn declration.
+// getters=> access properties
+// setters=> change (mutate) them
