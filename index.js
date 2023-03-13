@@ -1,15 +1,25 @@
-// let vs var
-function start() {
-  for (var i = 0; i < 5; i++) console.log(i);
-  console.log(i);
+// this references the obj that is executing the current fn.
+// method-> obj
+// fn-> global(window in browser ,global in node)
+
+const video = {
+  title: "a",
+  play: function () {
+    console.log(this);
+  },
+};
+
+video.stop = function () {
+  console.log(this);
+};
+
+// video.play();
+// video.stop();
+// console.log(video);
+
+function Video1(title) {
+  this.title = title;
+  console.log(this); // references new empty obj
 }
 
-start();
-
-// let & const => block-scope
-// var => fn-scope
-
-// var attaches globally defined variables with window obj.
-// which is bad parctice.
-
-// all fn defined on globally also get attached to window obj.
+const v = new Video1("sd");
