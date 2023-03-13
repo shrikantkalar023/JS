@@ -1,32 +1,15 @@
-// try and catch. Error handling.
-const person = {
-  firstName: "Shrikant",
-  lastName: "Kalar",
-  get fullName() {
-    return `${person.firstName} ${person.lastName}`;
-  },
-
-  set fullName(value) {
-    if (typeof value !== "string") {
-      throw new Error("Value is not a string");
-    }
-    const parts = value.split(" ");
-    if (parts.length != 2) {
-      throw new Error("Enter a first and last name.");
-    }
-    // lines after throw are not run if error is caught.
-    this.firstName = parts[0];
-    this.lastName = parts[1];
-  },
-};
-
-try {
-  person.fullName = "";
-} catch (e) {
-  // console.log(e);
-  alert(e); //alert is old way. Use red label here instead.
+// let vs var
+function start() {
+  for (var i = 0; i < 5; i++) console.log(i);
+  console.log(i);
 }
 
-console.log(person);
+start();
 
-// throwing an error makes it exception.
+// let & const => block-scope
+// var => fn-scope
+
+// var attaches globally defined variables with window obj.
+// which is bad parctice.
+
+// all fn defined on globally also get attached to window obj.
