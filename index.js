@@ -1,15 +1,25 @@
-// this references the obj that is executing the current fn.
-// method-> obj
-// fn-> global(window in browser ,global in node)
-
 const video = {
   title: "a",
   tags: ["a", "b", "c"],
   showTags: function () {
-    this.tags.forEach(function (tag) {
-      console.log(this.title, tag); //this is referencing global window obj here
-    }, this); //this refs video obj bsc we in showTags()
+    // const self = this; //not preferred but works
+    this.tags.forEach(
+      function (tag) {
+        console.log(this.title, tag);
+      }.bind(this)
+    );
   },
 };
 
 video.showTags();
+
+function playVideo(a, b) {
+  console.log(this);
+}
+
+playVideo.call({ name: "shrikant" }, 1, 2);
+playVideo.apply({ name: "shrikant" }, [1, 2]);
+// const fn = playVideo.bind({ name: "shrikant" }, [1, 2]);
+// fn();
+playVideo.bind({ name: "shrikant" }, [1, 2])();
+playVideo();
