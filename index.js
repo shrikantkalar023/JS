@@ -1,11 +1,6 @@
-const video = {
-  title: "a",
-  tags: ["a", "b", "c"],
-  showTags() {
-    this.tags.forEach((tag) => console.log(this.title, tag));
-  },
-};
+function sum(...num) {
+  if (num.length === 1 && Array.isArray(num[0])) num = [...num[0]];
+  return num.reduce((a, b) => a + b);
+}
 
-video.showTags();
-
-// arrow fns inherit this value from containing fn
+console.log(sum([1, 2, 3, 4]));

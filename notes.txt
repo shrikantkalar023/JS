@@ -1,4 +1,4 @@
-1.Use 'let' when need variable 'var' & 'const' when need constant var.
+1.Use 'let' when need variable 'const' when need constant var.
 
 2.FORIN LOOP:- to 'iterate' in object.
 
