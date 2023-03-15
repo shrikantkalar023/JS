@@ -24,3 +24,14 @@ to get array of keys & key,value pair respectively.
 
 11.'Hoisting' in JS is moving up all the fn declarations to the top of the file.
 it is done by automaticallly JS engine executing the code.
+
+12. OOP is a style of programing. 4 pillars (Encapsulation, Abstraction, 
+Inheritance, Polymorphism).
+
+Encapsulation = grouping related vars and fns into objects.
+Abstraction= hiding properties and methods from user.
+Inheritance= eliminating redundant code via letting child inherit properties from parent.
+Polymorphism= same fns behaving in diff ways.
+
+13.Closure vs Scope: Closure is permanent while Scope is temporary.
+Closure: what vars are accessible to inner fns

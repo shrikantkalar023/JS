@@ -1,17 +1,20 @@
-const nums = [1, 3, 3, 2, 4];
+// private methods & properties ...implementing Abstraction
 
-try {
-  const count = countOccurrences(true, 3);
-  console.log(count);
-} catch (e) {
-  console.log(e.message);
+function Circle(radius) {
+  this.radius = radius;
+  let defLocation = { x: 0, y: 0 };
+
+  let computeOptimalLocation = function (factor) {
+    // ....
+  };
+  this.draw = function () {
+    computeOptimalLocation(1);
+    // defLocation
+    // this.radius
+
+    console.log("drawC");
+  };
 }
 
-function countOccurrences(array, searchEle) {
-  if (!Array.isArray(array))
-    throw new Error("Please enter array of numbers only");
-  return array.reduce((accumulator, current) => {
-    if (current === searchEle) accumulator++;
-    return accumulator;
-  }, 0);
-}
+let circle = new Circle(10);
+circle.draw();
