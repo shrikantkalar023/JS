@@ -35,3 +35,6 @@ Polymorphism= same fns behaving in diff ways.
 
 13.Closure vs Scope: Closure is permanent while Scope is temporary.
 Closure: what vars are accessible to inner fns
+
+14.Classical & Prototypical Inheritance in JS. Prototype is a regular obj which can be
+thought as a parent. Every obj has a Prototype,except the root proto ojb.
