@@ -1,22 +1,15 @@
-function Circle(radius) {
-  // Instance members
-  this.radius = radius;
+let person = { name: "Shrikant" };
 
-  this.move = function () {
-    // this.draw();
-    console.log("move");
-  };
-}
+// objectBase = Object.getPrototypeOf(person);
+// let descriptor = Object.getOwnPropertyDescriptor(objectBase, "toString");
+// console.log(descriptor);
 
-// Prototype members
-Circle.prototype.draw = function () {
-  this.move();
-  console.log("draw");
-};
+Object.defineProperty(person, "name", {
+  writable: false,
+  enumerable: true,
+  configurable: false,
+});
 
-const c1 = new Circle(1);
-const c2 = new Circle(1);
-
-Circle.prototype.toString = function () {
-  return "Circle with radius " + this.radius;
-};
+delete person.name;
+person.name = "josh";
+console.log(Object.keys(person));
