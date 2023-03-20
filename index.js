@@ -1,32 +1,22 @@
-function Stopwatch() {
-  let startTime,
-    stopTime,
-    running,
-    duration = 0;
+function Circle(radius) {
+  // Instance members
+  this.radius = radius;
 
-  this.start = function () {
-    if (running) throw new Error("Stopwatch is already running");
-    running = true;
-    startTime = new Date();
-  };
-
-  this.stop = function () {
-    if (!running) throw new Error("Stopwatch is not running");
-    running = false;
-    stopTime = new Date();
-    duration += (stopTime.getTime() - startTime.getTime()) / 1000;
-
-    Object.defineProperty(this, "duration", {
-      get: function () {
-        return duration;
-      },
-    });
-  };
-
-  this.reset = function () {
-    startTime = null;
-    stopTime = null;
-    running = false;
-    duration = 0;
+  this.move = function () {
+    // this.draw();
+    console.log("move");
   };
 }
+
+// Prototype members
+Circle.prototype.draw = function () {
+  this.move();
+  console.log("draw");
+};
+
+const c1 = new Circle(1);
+const c2 = new Circle(1);
+
+Circle.prototype.toString = function () {
+  return "Circle with radius " + this.radius;
+};

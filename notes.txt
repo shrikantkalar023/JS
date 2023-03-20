@@ -38,3 +38,5 @@ Closure: what vars are accessible to inner fns
 
 14.Classical & Prototypical Inheritance in JS. Prototype is a regular obj which can be
 thought as a parent. Every obj has a Prototype,except the root proto ojb.
+
+15. Objs created by same Constructor have same Prototype.
