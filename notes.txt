@@ -40,3 +40,6 @@ Closure: what vars are accessible to inner fns
 thought as a parent. Every obj has a Prototype,except the root proto ojb.
 
 15. Objs created by same Constructor have same Prototype.
+
+16. Every 'Constructor' fn has a 'Prototype' property, which is same as
+obj.__proto__ of all objs made by that Constructor. (objectBase)
