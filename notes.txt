@@ -47,3 +47,5 @@ obj.__proto__ of all objs made by that Constructor. (objectBase)
 17. Don't modify objects u don't own. (built-in objs)
 
 18. Premature optimizations is the root of all evil.
+
+19. Whenever we reset prototype, we should reset Constructor as well.
