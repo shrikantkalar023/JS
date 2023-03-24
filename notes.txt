@@ -49,3 +49,7 @@ obj.__proto__ of all objs made by that Constructor. (objectBase)
 18. Premature optimizations is the root of all evil.
 
 19. Whenever we reset prototype, we should reset Constructor as well.
+
+20.Avoid creating Inheritance hierarchies bsc they r very fragile. Max 1 level of inheritance.
+
+21. Favour 'Composition' over 'Inheritance'. mixins
