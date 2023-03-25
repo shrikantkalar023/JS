@@ -1,25 +1,13 @@
-// OG way
-// function Circle(radius) {
-//   this.radius = radius;
+// Fn declaration..these r hoisted
+function sayHello() {}
 
-//   this.draw = function () {
-//     console.log("draw");
-//   };
-// }
+// Fn expression..not hoisted
+const sayGoodbye = function () {};
 
-// new ES6 classes
-// these r essentially Constructor fns
-class Circle {
-  constructor(radius) {
-    this.radius = radius;
-    this.move = function () {
-      console.log("move");
-    };
-  }
+// Class declaration...use this
+class Circle {}
 
-  draw() {
-    console.log("draw");
-  }
-}
+// Class expression
+const Square = class {};
 
-c = new Circle(1);
+// Both Class declaration & expression are not hoisted.
