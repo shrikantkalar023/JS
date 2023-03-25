@@ -1,13 +1,11 @@
-"use strict";
-// using strict mode.
-
-const Circle = function () {
-  this.draw = function () {
+// by default body of our class is executed in strict mode
+class Circle {
+  draw() {
     console.log(this);
-  };
-};
+  }
+}
 
-const c = new Circle(1);
+const c = new Circle();
 
 // Method call
 c.draw();
