@@ -1,13 +1,18 @@
-// Fn declaration..these r hoisted
-function sayHello() {}
+"use strict";
+// using strict mode.
 
-// Fn expression..not hoisted
-const sayGoodbye = function () {};
+const Circle = function () {
+  this.draw = function () {
+    console.log(this);
+  };
+};
 
-// Class declaration...use this
-class Circle {}
+const c = new Circle(1);
 
-// Class expression
-const Square = class {};
+// Method call
+c.draw();
 
-// Both Class declaration & expression are not hoisted.
+const draw1 = c.draw;
+
+// Fn call...standalone
+draw1();
