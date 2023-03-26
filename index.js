@@ -1,21 +1,23 @@
-// two methods: symbols & maps
+// using WeakMaps for Private properties & methods
 
-const _radius = Symbol();
-// Symbol is a unique identifier
-const _draw = Symbol();
+const _radius = new WeakMap();
+// WeakMap is a dict with obj as keys.
+const _move = new WeakMap();
 
 class Circle {
   constructor(radius) {
-    this[_radius] = radius;
+    _radius.set(this, radius);
+
+    _move.set(this, () => console.log("move", this));
   }
 
-  [_draw]() {
+  draw() {
+    // console.log(_radius.get(this));
+    _move.get(this)();
     console.log("draw");
   }
 }
 
 const c = new Circle(1);
 console.log(c);
-
-const key = Object.getOwnPropertySymbols(c)[0];
-console.log(c[key]);
+c.draw();

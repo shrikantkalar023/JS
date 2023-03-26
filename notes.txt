@@ -55,3 +55,5 @@ obj.__proto__ of all objs made by that Constructor. (objectBase)
 21. Favour 'Composition' over 'Inheritance'. mixins
 
 22.ES6 classes r just Constructor fns. Cleaner syntax.
+
+23.Arrow fns use 'this' value of their containing fns.
