@@ -1,19 +1,21 @@
-const _radius = new WeakMap();
-
-class Circle {
-  constructor(radius) {
-    _radius.set(this, radius);
+class Shape {
+  constructor(color) {
+    this.color = color;
   }
-
-  // new ES6 cleaner syntax
-  get radius() {
-    return _radius.get(this);
-  }
-
-  set radius(value) {
-    if (value <= 0) throw new Error("invalid radius");
-    _radius.set(this, value);
+  move() {
+    console.log("move");
   }
 }
-const c = new Circle(1);
+
+class Circle extends Shape {
+  constructor(color, radius) {
+    super(color);
+    this.radius = radius;
+  }
+  draw() {
+    console.log("draw");
+  }
+}
+
+c = new Circle("red", 9);
 console.log(c);
