@@ -1,16 +1,21 @@
-// by default body of our class is executed in strict mode
+// two methods: symbols & maps
+
+const _radius = Symbol();
+// Symbol is a unique identifier
+const _draw = Symbol();
+
 class Circle {
-  draw() {
-    console.log(this);
+  constructor(radius) {
+    this[_radius] = radius;
+  }
+
+  [_draw]() {
+    console.log("draw");
   }
 }
 
-const c = new Circle();
+const c = new Circle(1);
+console.log(c);
 
-// Method call
-c.draw();
-
-const draw1 = c.draw;
-
-// Fn call...standalone
-draw1();
+const key = Object.getOwnPropertySymbols(c)[0];
+console.log(c[key]);
