@@ -57,3 +57,9 @@ obj.__proto__ of all objs made by that Constructor. (objectBase)
 22.ES6 classes r just Constructor fns. Cleaner syntax.
 
 23.Arrow fns use 'this' value of their containing fns.
+
+24. Modules 4 types of syntax:-
+    1.AMD (browser)
+    2.CommonJS (Node.js)
+    3.UMD (broser & Node.js)
+    4.ES6 new native module format (browser)
