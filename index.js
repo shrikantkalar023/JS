@@ -1,15 +1,28 @@
-class Shape {
-  move() {
-    console.log("move");
+const _array = new WeakMap();
+
+class Stack {
+  constructor() {
+    _array.set(this, []);
+  }
+
+  get count() {
+    return _array.get(this).length;
+  }
+
+  peek() {
+    // if count =0 new Error('Stack is empty')
+    if (this.count === 0) throw new Error("Stack is empty");
+    return _array.get(this)[this.count - 1];
+  }
+  pop() {
+    if (this.count === 0) throw new Error("Stack is empty");
+    return _array.get(this).pop();
+  }
+  push(value) {
+    // array.push
+    _array.get(this).push(value);
   }
 }
 
-class Circle extends Shape {
-  move() {
-    super.move();
-    console.log("Circle move");
-  }
-}
-
-c = new Circle();
-console.log(c);
+const s = new Stack();
+console.log(s);
